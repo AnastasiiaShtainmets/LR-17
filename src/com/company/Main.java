@@ -7,7 +7,7 @@ abstract class Logistic {
     String Transport;
     List<String> accessories=new ArrayList();
     public String toString(){
-        return "Type of transportation:" + "Transport \n"+ accessories;
+        return "Вид транспорта:" + Transport + "\n"+ accessories;
 
     }
 }
@@ -16,42 +16,45 @@ abstract class LogisticFactory{
 }
 class RoadLogisticFactory extends LogisticFactory {
     public Logistic createLogistic(){
+
         return new RoadLogistic();
     }}
 class AirLogisticFactory extends LogisticFactory{
     public Logistic createLogistic(){
+
         return new AirLogistic();
     }}
 class SeaLogisticFactory extends LogisticFactory{
     public Logistic createLogistic(){
+
         return new SeaLogistic();
     }}
 
 class RoadLogistic extends Logistic{
     public RoadLogistic(){
-        Transport="RoadLogistic";
-        accessories.add("Capacity in tons");
-        accessories.add("Fuel consumption");
-        accessories.add("Travel time");
-        accessories.add("Navigation system");
+        Transport="Грузовик";
+        accessories.add("Вместимость в тоннах");
+        accessories.add("Потребление топлива");
+        accessories.add("Время в пути");
+        accessories.add("Навигационная система");
     }
 }
 class AirLogistic extends Logistic{
     public AirLogistic(){
-        Transport="AirLogistic";
-        accessories.add("Capacity in tons");
-        accessories.add("Fuel consumption");
-        accessories.add("Travel time");
-        accessories.add("Navigation system");
+        Transport="Самолет";
+        accessories.add("Вместимость в тоннах");
+        accessories.add("Потребление топлива");
+        accessories.add("Время в пути");
+        accessories.add("Навигационная система");
     }
 }
 class SeaLogistic extends Logistic{
     public SeaLogistic(){
-        Transport="SeaLogistic";
-        accessories.add("Capacity in tons");
-        accessories.add("Fuel consumption");
-        accessories.add("Travel time");
-        accessories.add("Navigation system");
+        Transport="Корабль";
+        accessories.add("Вместимость в тоннах");
+        accessories.add("Потребление топлива");
+        accessories.add("Время в пути");
+        accessories.add("Навигационная система");
     }
 }
 
